@@ -21,9 +21,8 @@ module.exports = {
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-      "ecmaVersion": "latest",
+      "ecmaVersion": "2020",
       "sourceType": "module",
-      "project": "./backend/tsconfig.json"
   },
   "plugins": [
       "react",
