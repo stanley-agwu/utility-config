@@ -1,0 +1,25 @@
+{
+  "name": "utility-config",
+  "version": "1.0.0",
+  "description": "React Development code standards",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "utility-config"
+  },
+  "keywords": [
+    "lint",
+    "linting",
+    "eslint",
+    "sort",
+    "order",
+    "style-lint",
+    "test",
+    "testing"
+  ],
+  "author": "Stanley Agwu",
+  "license": "ISC"
+}
