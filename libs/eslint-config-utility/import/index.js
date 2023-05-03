@@ -1,16 +1,25 @@
 module.exports = {
+  root: true,
+  env: {
+    browser: true,
+    es6: true,
+    node: true,
+    jest: true,
+  },
   extends: [
+    'eslint:recommended',
     'plugin:react/recommended',
     'plugin:prettier/recommended',
     'plugin:@typescript-eslint/recommended',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
+    prodject: ['tsconfig.json'],
     sourceType: 'module',
   },
   settings: {
     react: {
-      version: 'detect'
+      version: 'detect',
     },
     'import/parsers': {
       '@typescript-eslint/parser': ['.js', '.jsx', '.ts', '.tsx'],
@@ -22,19 +31,22 @@ module.exports = {
       node: {
         paths: ['src'],
         extensions: ['.js', '.jsx', '.ts', '.tsx'],
-      }
+      },
     },
   },
-  plugins: [
-    'simple-import-sort',
-    'import',
-  ],
+  plugins: ['import', 'simple-import-sort'],
   rules: {
-    'prettier/prettier': ['error', {
-      'endOfLine': 'auto'
-    }],
-    'simple-import-sort': 'error',
+    'prettier/prettier': [
+      'error',
+      {
+        endOfLine: 'auto',
+      },
+    ],
+    'simple-import-sort/imports': 'error',
     'simple-import-sort/exports': 'error',
+    'import/first': 'error',
+    'import/newline-after-import': 'error',
+    'import/no-duplicates': 'error',
     'sort-imports': 'off',
     'import/order': 'off',
   },
@@ -42,7 +54,7 @@ module.exports = {
     {
       files: ['**/*.js', '**/*.jsx', '**/*.ts', '**/*.tsx'],
       rules: {
-        'simple-import-sort/import': [
+        'simple-import-sort/imports': [
           'error',
           {
             groups: [
@@ -78,11 +90,11 @@ module.exports = {
               ['^\\./(?!.*\\.(css|s[ac]ss)$).+$'],
               // Styles imports
               ['\\.(css|s[ac]ss)$'],
-            ]
-          }
-        ]
-      }
-    }
+            ],
+          },
+        ],
+      },
+    },
   ],
-  ignorepatterns: ['build/*', 'coverage/*', 'public/*'],
-}
+  ignorePatterns: ['build/*', 'coverage/*', 'public/*'],
+};

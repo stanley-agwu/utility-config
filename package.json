@@ -16,9 +16,13 @@
     "eslint",
     "sort",
     "order",
+    "import",
     "style-lint",
     "test",
-    "testing"
+    "testing",
+    "styles",
+    "prettier",
+    "format"
   ],
   "author": "Stanley Agwu",
   "license": "ISC",

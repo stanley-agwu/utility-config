@@ -9,12 +9,4 @@ module.exports = {
   printWidth: 100,
   bracketSpacing: true,
   arrowParens: 'always',
-  overrrides: [
-    {
-      files: ['**/*.css', '**/*.scss', '**/*.html'],
-      options: {
-        singleQuote: false,
-      }
-    }
-  ]
 };

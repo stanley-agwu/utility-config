@@ -1,12 +1,12 @@
 {
-  "name": "eslint-utility-config",
+  "name": "eslint-config-utility",
   "version": "1.0.0",
-  "description": "linter for maintaining consistent coding standard",
+  "description": "linter for formatting and maintaining consistent coding standard, and import sort order",
   "main": "index.js",
   "files": [
     "index.js",
     "prettier.config.js",
-    "sort/index.js"
+    "import/index.js"
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -15,7 +15,12 @@
     "eslint",
     "linter",
     "rules",
-    "lint"
+    "lint",
+    "import",
+    "sort",
+    "order",
+    "prettier",
+    "formatting"
   ],
   "author": "Stanley Agwu",
   "license": "ISC",
