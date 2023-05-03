@@ -60,7 +60,7 @@ module.exports = {
 };
 ```
 
-You can check that the imports sort and order using `npx eslint . --fix`.
+You can check that the imports are sorted and ordered using `npx eslint . --fix`.
 
 ```sh
 npx eslint . --fix
