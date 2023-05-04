@@ -18,11 +18,14 @@ This package exports three utility tools for use.
 
 The default export contains basic ESLint rules, which can be extended by adding additional rules.
 
-Add `"extends": "utility"` to your `.eslintrc` and you are good to go.
+Add `"extends": "utility"` to your `.eslintrc`. And for `@typescript-eslint` rules, which requires parserServices to be generated, then a value for the `parserOptions.project` property needs to be added to `.eslintrc` file, with path to `tsconfig.json`:
 
 ```js
 module.exports = {
   extends: ['utility'],
+  parserOptions: {
+    project: './**path to**/tsconfig.json',
+  },
 };
 ```
 
@@ -31,6 +34,9 @@ If you want, you can extend the rules, by adding additional rules, for example:
 ```js
 module.exports = {
   extends: ['utility'],
+  parserOptions: {
+    project: './**path to**/tsconfig.json',
+  },
   rules: {
     'no-console': 2,
   },
@@ -57,6 +63,9 @@ To use the import sort order, add `"extends": ["utility", "utility/import"]` to 
 ```js
 module.exports = {
   extends: ['utility', 'utility/import'],
+  parserOptions: {
+    project: './**path to**/tsconfig.json',
+  },
 };
 ```
 
