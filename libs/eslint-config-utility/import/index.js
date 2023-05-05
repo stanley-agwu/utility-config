@@ -14,7 +14,7 @@ module.exports = {
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
-    prodject: ['tsconfig.json'],
+    project: ['tsconfig.json'],
     sourceType: 'module',
   },
   settings: {
@@ -37,25 +37,25 @@ module.exports = {
   plugins: ['import', 'simple-import-sort'],
   rules: {
     'prettier/prettier': [
-      'error',
+      2,
       {
         endOfLine: 'auto',
       },
     ],
-    'simple-import-sort/imports': 'error',
-    'simple-import-sort/exports': 'error',
-    'import/first': 'error',
-    'import/newline-after-import': 'error',
-    'import/no-duplicates': 'error',
-    'sort-imports': 'off',
-    'import/order': 'off',
+    'simple-import-sort/imports': 2,
+    'simple-import-sort/exports': 2,
+    'import/first': 2,
+    'import/newline-after-import': 2,
+    'import/no-duplicates': 2,
+    'sort-imports': 0,
+    'import/order': 0,
   },
   overrides: [
     {
       files: ['**/*.js', '**/*.jsx', '**/*.ts', '**/*.tsx'],
       rules: {
         'simple-import-sort/imports': [
-          'error',
+          2,
           {
             groups: [
               // react and react scoped imports first, then next, and other packages

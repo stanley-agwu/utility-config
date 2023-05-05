@@ -22,29 +22,29 @@ module.exports = {
   parserOptions: {
     ecmaVersion: '2020',
     sourceType: 'module',
-    prodject: ['tsconfig.json'],
+    project: ['tsconfig.json'],
   },
   plugins: ['react', '@typescript-eslint', 'import', 'prettier'],
   rules: {
     'prettier/prettier': [
-      'error',
+      2,
       {
         endOfLine: 'auto',
       },
     ],
-    'react/jsx-uses-react': 'off',
-    'import/extensions': 'off',
-    'react/react-in-jsx-scope': 'off',
-    'import/prefer-default-export': 'off',
-    '@typescript-eslint/no-unsafe-assignment': 'off',
-    'no-param-reassign': 'off',
-    '@typescript-eslint/no-shadow': 'off',
-    '@typescript-eslint/no-unused-expressions': 'off',
-    '@typescript-eslint/no-unsafe-member-access': 'off',
-    '@typescript-eslint/no-misused-promises': 'warn',
-    '@typescript-eslint/no-floating-promises': 'warn',
+    'react/jsx-uses-react': 0,
+    'import/prefer-default-export': 0,
+    'import/extensions': 0,
+    'react/react-in-jsx-scope': 0,
+    '@typescript-eslint/no-unsafe-assignment': 0,
+    'no-param-reassign': 0,
+    '@typescript-eslint/no-shadow': 0,
+    '@typescript-eslint/no-unused-expressions': 0,
+    '@typescript-eslint/no-unsafe-member-access': 0,
+    '@typescript-eslint/no-misused-promises': 1,
+    '@typescript-eslint/no-floating-promises': 1,
     'import/order': [
-      'error',
+      2,
       {
         'newlines-between': 'never',
         groups: [
@@ -54,7 +54,7 @@ module.exports = {
       },
     ],
     '@typescript-eslint/naming-convention': [
-      'warn',
+      1,
       {
         selector: 'variable',
         format: ['camelCase', 'PascalCase', 'UPPER_CASE'],
