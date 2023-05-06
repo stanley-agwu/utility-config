@@ -1,6 +1,6 @@
 # eslint-config-utility
 
-This is a custom package that provides a .eslintrc as an extensible shared config.
+This is a utility config that provides a custom .eslintrc and .prettierrc config.
 
 ## Getting started
 
@@ -8,6 +8,12 @@ Installation:
 
 ```sh
 npm i -D eslint-config-utility@latest
+```
+
+Run the following command and install packages provided as dev dependencies:
+
+```sh
+npm info "eslint-config-utility@latest" peerDependencies
 ```
 
 ## Usage
@@ -18,15 +24,24 @@ This package exports three utility tools for use.
 
 The default export contains basic ESLint rules, which can be extended by adding additional rules.
 
-Add `"extends": "utility"` to your `.eslintrc`. And for `@typescript-eslint` rules, which requires parserServices to be generated, then a value for the `parserOptions.project` property needs to be added to `.eslintrc` file, with path to `tsconfig.json`:
+Add `"extends": "utility"` to your `.eslintrc`.
 
 ```js
 module.exports = {
   extends: ['utility'],
-  parserOptions: {
-    project: './**path to**/tsconfig.json',
-  },
 };
+```
+
+Then create a `.eslintignore` file and add the following files to ignore that applies to your project: `node_modules`, `.eslintrc.json` or `.eslintrc.js`, `build/`, `coverage/`, `dist/`, `.env` etc.
+
+```js
+.eslintrc.json
+.eslintrc.js
+.env
+node_modules/
+build/
+coverage/
+dist/
 ```
 
 If you want, you can extend the rules, by adding additional rules, for example:
@@ -34,9 +49,6 @@ If you want, you can extend the rules, by adding additional rules, for example:
 ```js
 module.exports = {
   extends: ['utility'],
-  parserOptions: {
-    project: './**path to**/tsconfig.json',
-  },
   rules: {
     'no-console': 2,
   },
@@ -63,9 +75,6 @@ To use the import sort order, add `"extends": ["utility", "utility/import"]` to 
 ```js
 module.exports = {
   extends: ['utility', 'utility/import'],
-  parserOptions: {
-    project: './**path to**/tsconfig.json',
-  },
 };
 ```
 
