@@ -4,7 +4,7 @@
   "description": "React Development code standards",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "commit": "cz"
   },
   "repository": {
     "type": "git",
@@ -43,9 +43,48 @@
     "eslint-plugin-react-hooks": "^4.6.0"
   },
   "devDependencies": {
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.39.0",
     "jest": "^29.5.0",
     "prettier": "^2.8.8",
     "typescript": "^5.0.4"
+  },
+  "config": {
+    "commitizen": {
+      "scopeList": [
+        "eslint",
+        "stylelint",
+        "test"
+      ],
+      "disableBreakingChanges": true,
+      "types": {
+        "feat": {
+          "description": "A new feature or change in functionality",
+          "title": "Features"
+        },
+        "fix": {
+          "description": "A bug fix",
+          "title": "BugFixes"
+        },
+        "refactor": {
+          "description": "A code change that neither fixes a bug nor adds a new feature",
+          "title": "Refactors"
+        },
+        "chore": {
+          "description": "Changes to the build process or auxiliary tools or libraries such as documentation",
+          "title": "Chores"
+        },
+        "test": {
+          "description": "Adding missing tests",
+          "title": "Tests"
+        },
+        "revert": {
+          "description": "A code change to revert a previous commit",
+          "title": "Reverts"
+        }
+      },
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
