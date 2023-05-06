@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-utility",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "linter for formatting and maintaining consistent coding standard, and import sort order",
   "main": "index.js",
   "files": [
