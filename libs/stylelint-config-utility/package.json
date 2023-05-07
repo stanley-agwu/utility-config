@@ -1,6 +1,6 @@
 {
   "name": "stylelint-config-utility",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "linter for formatting and maintaining consistent styling standard, and styles ordering",
   "main": "index.js",
   "scripts": {
