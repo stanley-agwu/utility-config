@@ -27,7 +27,7 @@ Add `"extends": "stylelint-config-utility"` to your `.stylelintrc.json`.
 ```js
 {
   "extends": ["stylelint-config-utility"],
-};
+}
 ```
 
 If you want, you can extend the rules, by adding additional rules, for example:
@@ -38,7 +38,7 @@ If you want, you can extend the rules, by adding additional rules, for example:
   "rules": {
     "selector-no-vendor-prefix": true,
   },
-};
+}
 ```
 
 You can check that the package lints using:
