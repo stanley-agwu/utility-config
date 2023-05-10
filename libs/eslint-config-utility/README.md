@@ -32,6 +32,18 @@ module.exports = {
 };
 ```
 
+If you are using typescript with @typescript-eslint rules then it's recommended to add path to `tsconfig.json` to `parserOptions` in `.eslintrc` file as follows:
+
+```js
+module.exports = {
+  extends: ['utility'],
+  parserOptions: {
+    project: './tsconfig.json'
+  },
+};
+```
+Normally tsconfig.json is at the root of the project as above, except in few cases.
+
 Then create a `.eslintignore` file and add the following files to ignore that applies to your project: `node_modules`, `.eslintrc.json` or `.eslintrc.js`, `build/`, `coverage/`, `dist/`, `.env` etc.
 
 ```js
@@ -49,6 +61,9 @@ If you want, you can extend the rules, by adding additional rules, for example:
 ```js
 module.exports = {
   extends: ['utility'],
+  parserOptions: {
+    project: './tsconfig.json'
+  },
   rules: {
     'no-console': 2,
   },
@@ -75,6 +90,9 @@ To use the import sort order, add `"extends": ["utility", "utility/import"]` to 
 ```js
 module.exports = {
   extends: ['utility', 'utility/import'],
+  parserOptions: {
+    project: './tsconfig.json'
+  },
 };
 ```
 
